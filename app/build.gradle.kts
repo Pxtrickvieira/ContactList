@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.devspace.recyclerview"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.devspace.recyclerview"
@@ -15,6 +15,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    android {
+
+        buildFeatures {
+            viewBinding = true
+        }
     }
 
     buildTypes {
@@ -36,6 +42,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.recyclerview)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
